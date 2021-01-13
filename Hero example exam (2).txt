@@ -1,0 +1,33 @@
+
+~~~~[Ex 1]~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~   Create a program that simulates an MMORPG type boss fight!												   
+~	There are 2 types of characters in the simulation; heroes (healer or attacker) and an enemy ( the boss ).
+~	Each character has a name, a health, max health, and a lower and upper threshold for the damage it can do.
+~
+~	The simulation consists of multiple rounds where the boss selects a random hero and attacks it, 
+~	the attacker heroes attack the boss, and the healer heals the hero with the lowest health (even himself).
+~
+~	1) Boss: has a maximum of 300 health, deals damage between 30-45, waits 600-1200 ms between its attacks.
+~	2) Attacker: has a maximum of 120 health, deals damage between 5-10, waits 1300-1500 ms between its attacks.
+~	3) Healer: has a maximum of 100 health, heals between 25-35, waits 1500-2000 ms between its heals - 
+~			   the healer cannot heal more than the max health of the hero!
+~
+~	To generate a random number between these thresholds, use the java.util.Random class.
+~	The program simulates a scenario where there are 4 attackers, 1 healer and 1 boss.
+~	Each character is represented by a thread.
+~
+~	Use Thread.sleep to wait the appropriate amount between attacks/heals!
+~
+~	The simulation ends if the boss kills all of the heroes, or if the heroes manage to kill the boss.
+~
+~	TIPS:
+~
+~	- The healer and the boss needs to access all of the heroes (use a thread safe collection to keep them).
+~	- Since 4 attackers might attack at the same time, 
+~      or a boss attack and a heal might happen at the same time, 
+~	  the characters' health needs to be made thread safe.
+~	- Multiple threads will try to access the Random number generator - make it thread safe.
+~	- All of the threads need to know if the simulation is over, the boolean you use should also be safe.			 
+~																											 	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
